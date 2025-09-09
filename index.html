@@ -7,38 +7,54 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="calc">
+  <!-- Choose ONE:
+       1) Centered card (round keys):      <main class="calc">
+       2) Full-width bar (rect keys):       <main class="calc layout--bar">
+       3) Left-docked panel (rect keys):    <main class="calc layout--left">
+  -->
+  <main class="calc layout--bar">
     <!-- DISPLAY -->
     <section class="screen">
       <div id="expr" class="expr">0</div>
       <div id="res"  class="res">0</div>
     </section>
 
-    <!-- KEYPAD -->
+    <!-- KEYPAD — standard order + AC + smart "()" -->
     <section class="keys">
-      <button data-action="clear" class="accent">AC</button>
-      <button data-action="back">⌫</button>
+      <!-- Row 1 -->
       <button data-action="percent">%</button>
+      <button data-action="clear" class="accent">AC</button>
+      <button data-action="back" aria-label="Backspace">⌫</button>
       <button data-insert="÷" class="op">÷</button>
 
+      <!-- Row 2 -->
+      <button data-action="invx">1/x</button>
+      <button data-action="square">x²</button>
+      <button data-action="sqrt">√x</button>
+      <button data-insert="×" class="op">×</button>
+
+      <!-- Row 3 -->
       <button data-insert="7">7</button>
       <button data-insert="8">8</button>
       <button data-insert="9">9</button>
-      <button data-insert="×" class="op">×</button>
+      <button data-insert="−" class="op">−</button>
 
+      <!-- Row 4 -->
       <button data-insert="4">4</button>
       <button data-insert="5">5</button>
       <button data-insert="6">6</button>
-      <button data-insert="−" class="op">−</button>
+      <button data-insert="+" class="op">+</button>
 
+      <!-- Row 5 -->
       <button data-insert="1">1</button>
       <button data-insert="2">2</button>
       <button data-insert="3">3</button>
-      <button data-insert="+" class="op">+</button>
+      <button data-action="brackets">()</button>
 
-      <button data-insert="(">(</button>
+      <!-- Row 6 -->
+      <button data-action="negate">+/−</button>
       <button data-insert="0">0</button>
-      <button data-insert=")">)</button>
+      <button data-insert=".">.</button>
       <button data-action="equals" class="equals">=</button>
     </section>
   </main>

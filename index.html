@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calc">
+    <!-- DISPLAY -->
+    <section class="screen">
+      <div id="expr" class="expr">0</div>
+      <div id="res"  class="res">0</div>
+    </section>
+
+    <!-- KEYPAD -->
+    <section class="keys">
+      <button data-action="clear" class="accent">AC</button>
+      <button data-action="back">⌫</button>
+      <button data-action="percent">%</button>
+      <button data-insert="÷" class="op">÷</button>
+
+      <button data-insert="7">7</button>
+      <button data-insert="8">8</button>
+      <button data-insert="9">9</button>
+      <button data-insert="×" class="op">×</button>
+
+      <button data-insert="4">4</button>
+      <button data-insert="5">5</button>
+      <button data-insert="6">6</button>
+      <button data-insert="−" class="op">−</button>
+
+      <button data-insert="1">1</button>
+      <button data-insert="2">2</button>
+      <button data-insert="3">3</button>
+      <button data-insert="+" class="op">+</button>
+
+      <button data-insert="(">(</button>
+      <button data-insert="0">0</button>
+      <button data-insert=")">)</button>
+      <button data-action="equals" class="equals">=</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
